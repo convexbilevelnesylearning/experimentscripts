@@ -1,0 +1,34 @@
+# System files #
+################
+.DS_Store
+
+# IDE metadata #
+####################
+.classpath
+.project
+.settings
+.idea/
+*.iml
+
+# Editor Temporary #
+####################
+*.swp
+
+# Python #
+##########
+__pycache__
+
+# Data #
+########
+*.zip
+
+# Experiment Output #
+#####################
+*-learned.psl
+*.jar
+out*.txt
+out*.err
+inferred-predicates/
+results/
+data/
+psl-examples/
