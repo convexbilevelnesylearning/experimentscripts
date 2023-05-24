@@ -21,6 +21,12 @@ function main() {
 
     ./scripts/setup_psl_examples.sh
     for dataset in $PSL_DATASETS; do
+        echo "Running psl inference timing experiments on dataset: ${dataset}."
+        python3 ./scripts/run_inference_timing_experiments.py ${dataset}
+    done
+
+    ./scripts/setup_psl_examples.sh
+    for dataset in $PSL_DATASETS; do
         echo "Running psl weight learning inference timing experiments on dataset: ${dataset}."
         python3 ./scripts/run_weight_learning_inference_timing_experiments.py ${dataset}
     done

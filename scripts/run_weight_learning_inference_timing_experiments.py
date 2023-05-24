@@ -58,7 +58,6 @@ STANDARD_DATASET_OPTIONS = {
 
 FIRST_ORDER_WL_METHODS = ["StructuredPerceptron", "MeanSquaredError"]
 FIRST_ORDER_WL_INFERENCE_METHODS = ["ADMMInference", "DualBCDInference", "DistributedDualBCDInference"]
-SAMPLING_WL_METHODS = ["GaussianProcessPrior", "ContinuousRandomGridSearch"]
 
 FIRST_ORDER_WL_METHODS_STANDARD_OPTION_RANGES = {
     "gradientdescent.negativelogregularization": ["1.0e-3"],
