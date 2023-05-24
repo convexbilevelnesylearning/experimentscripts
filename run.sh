@@ -21,17 +21,25 @@ function main() {
 
     ./scripts/setup_psl_examples.sh
     for dataset in $PSL_DATASETS; do
-        echo "Running psl weight learning performance experiments on dataset: ${dataset}."
-        python3 ./scripts/run_weight_learning_performance_experiments.py ${dataset}
-    done
-
-    ./scripts/setup_psl_examples.sh
-    for dataset in $PSL_DATASETS; do
         echo "Running psl weight learning inference timing experiments on dataset: ${dataset}."
         python3 ./scripts/run_weight_learning_inference_timing_experiments.py ${dataset}
     done
 
+    ./scripts/setup_psl_examples.sh
+    for dataset in $PSL_DATASETS; do
+        echo "Running psl weight learning performance experiments on dataset: ${dataset}."
+        python3 ./scripts/run_weight_learning_performance_experiments.py ${dataset}
+    done
 
+    pushd . >/dev/null
+      cd citation
+      python3 ./scripts/run_weight_learning_performance_experiments.py
+    popd >/dev/null
+
+    pushd . >/dev/null
+      cd mnist-addition
+      python3 ./scripts/run_mnistadd1_weight_learning_performance_experiments.py
+    popd >/dev/null
 }
 
 main "$@"
