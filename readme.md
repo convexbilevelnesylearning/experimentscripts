@@ -5,7 +5,7 @@ These experiments expect that you are running on a POSIX (Linux/Mac) system.
 The specific application dependencies are as follows:
  - Bash >= 4.0
  - Java >= 7
- - Postgres >= 9.5
+ - Python >= 3.7
 
 ### Setup
 These scripts assume you have already built and installed NeuPSL from our repository.
